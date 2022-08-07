@@ -2,7 +2,7 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
 
-  config.hosts << "8a0f14d4116a4c74821775eb8f212a25.vfs.cloud9.us-west-1.amazonaws.com"
+  config.hosts.clear
   config.active_job.queue_adapter = :inline
   # Settings specified here will take precedence over those in config/application.rb.
 
