@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
+  #root to: "homes#top"
+  root 'homes#top'
   devise_for :users
+
+  #get 'postimages/new'
+  #get 'postimages/index'
+  #get 'postimages/show'
+  #上３つを下１つに変更した
+  resources :post_images, only: [:new, :create, :index, :show]
+
   #get 'homes/top'
-  root to: "homes#top"
+
   #resources :meshiterros
   get'/homes/about' => 'homes#about', as:'about'
 
