@@ -13,19 +13,21 @@ class PostimagesController < ApplicationController
 
 
   def index
+    # @post_images = post_image.all
   end
 
   def show
+    # @post_image = post_image.find(params[:id])
   end
-  
+
   def destroy
   end
-  
+
   # 投稿データのストロングパラメータ
   private
 
   def post_image_params
     params.require(:post_image).permit(:shop_name, :image, :caption)
   end
-  
+
 end

@@ -1,7 +1,7 @@
 class PostImage < ApplicationRecord
    has_one_attached :image
  　 belongs_to :user
- 　 
+
  　  def get_image
      unless image.attached?
       file_path = Rails.root.join('app/assets/images/no_image.jpg')
@@ -15,5 +15,5 @@ class PostImage < ApplicationRecord
      # 'no_image.jpg'
     #end
   end
-  
-end
+
+
