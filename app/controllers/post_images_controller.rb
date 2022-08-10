@@ -23,7 +23,7 @@ class PostImagesController < ApplicationController
   def destroy
     @post_image = PostImage.find(params[:id])#データ（レコード）を１件取得
     @post_image.destroy #データを削除
-    redirect_to '/PostImage' #投稿画面にリダイレクト
+    redirect_to new_post_image_path #投稿画面にリダイレクト
   end
 
   # 投稿データのストロングパラメータ
